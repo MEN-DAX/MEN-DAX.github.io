@@ -32,8 +32,8 @@ const RESOURCES = {
 "assets/assets/venus.png": "14dae1392661a4a322e45cda896c4afa",
 "assets/assets/vn.png": "4b7692c59019bf15a027595778bca8be",
 "assets/FontManifest.json": "7aaf3996738086bbd796613e14ef9e45",
-"assets/fonts/MaterialIcons-Regular.otf": "1288c9e28052e028aba623321f7826ac",
-"assets/NOTICES": "9722ed8a49d7498fdcbb4962fbd20842",
+"assets/fonts/MaterialIcons-Regular.otf": "4e6447691c9509f7acdbf8a931a85ca1",
+"assets/NOTICES": "8b058b9658e06f177251e05e6e89f593",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "assets/packages/flutter_icons/fonts/AntDesign.ttf": "3a2ba31570920eeb9b1d217cabe58315",
 "assets/packages/flutter_icons/fonts/Entypo.ttf": "744ce60078c17d86006dd0edabcd59a7",
@@ -54,9 +54,9 @@ const RESOURCES = {
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"index.html": "aa2fa54139be47d0f771ee7536c828e3",
-"/": "aa2fa54139be47d0f771ee7536c828e3",
-"main.dart.js": "4a72c37578ffc30c403b482cc472ace1",
+"index.html": "9900b790658e08bfca64872c246100e2",
+"/": "9900b790658e08bfca64872c246100e2",
+"main.dart.js": "68276cf82919069e7a9670e665bf060a",
 "manifest.json": "78ca9bc1b21553c580f8c80ba9827099",
 "version.json": "17ac4516f0ec6da12383bda5a849499d"
 };
@@ -76,7 +76,7 @@ self.addEventListener("install", (event) => {
   return event.waitUntil(
     caches.open(TEMP).then((cache) => {
       return cache.addAll(
-        CORE.map((value) => new Request(value + '?revision=' + RESOURCES[value], {'cache': 'reload'})));
+        CORE.map((value) => new Request(value, {'cache': 'reload'})));
     })
   );
 });
